@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- App state (profile, swipes, matches) lives in localStorage via `src/lib/store.ts` with sample students in `src/lib/students.ts`; frontend-only by design to keep it light until a real backend is requested.
