@@ -1,5 +1,5 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { Header } from "@/components/Header";
 import { HobbyChip } from "@/components/HobbyChip";
 import { Button } from "@/components/ui/button";
@@ -33,7 +33,7 @@ function Index() {
   const toggle = (h: string) =>
     setHobbies((p) => (p.includes(h) ? p.filter((x) => x !== h) : [...p, h]));
 
-  const submit = (e: React.FormEvent) => {
+  const submit = (e: FormEvent) => {
     e.preventDefault();
     if (!name.trim()) return setError("Please enter your name.");
     if (!isThaparEmail(email)) return setError("Only @thapar.edu emails can join.");
